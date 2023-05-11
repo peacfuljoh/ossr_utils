@@ -14,7 +14,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: bb_utils
-          environment-file: bb_utils/environment.yml
+          environment-file: environment.yml
           auto-activate-base: false
       - name: run tests
         run: make test-gha
