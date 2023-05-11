@@ -21,7 +21,7 @@ test-gha:
 
 build:
 	cd $(BB_ROOT_)
-	conda env update --prefix ./env --file environment.yml  --prune
+	conda env update --file environment.yml --prune
 	echo 'export PYTHONPATH="${PYTHONPATH}:$(BB_ROOT_)"' >> ~/.bashrc
 
 build-gha:
