@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "bb-utils"
+version = "0.1.0"
+description = "Utils for the buddybork system"
+authors = ["Johannes Traa"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

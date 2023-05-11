@@ -1,7 +1,7 @@
 
 import numpy as np
 
-from src.model_utils import get_conf_mat
+from src.bb_utils.model_utils import get_conf_mat
 
 
 def test_get_conf_mat():

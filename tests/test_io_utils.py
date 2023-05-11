@@ -3,7 +3,7 @@ import os
 
 import numpy as np
 
-from src.io_utils import save_pickle, load_pickle, save_json, load_json
+from src.bb_utils.io_utils import save_pickle, load_pickle, save_json, load_json
 
 
 def make_obj():

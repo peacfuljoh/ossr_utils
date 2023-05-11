@@ -1,7 +1,7 @@
 
 import numpy as np
 
-from src.misc_utils import get_colors, get_dists, logsumexp, get_majority_str, gauss_pdf
+from src.bb_utils.misc_utils import get_colors, get_dists, logsumexp, get_majority_str, gauss_pdf
 
 
 def test_get_colors():
