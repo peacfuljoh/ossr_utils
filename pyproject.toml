@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "ossr-utils"
-version = "0.1.0"
-description = "Utils for the buddybork system"
+version = "0.1.2"
+description = "Utils for the Open-Set Sound Recognition (OSSR) system"
 authors = ["Johannes Traa"]
 license = "MIT"
 readme = "README.md"
