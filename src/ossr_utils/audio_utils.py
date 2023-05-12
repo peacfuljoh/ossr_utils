@@ -19,4 +19,3 @@ def write_wav(fpath: str,
 
 def read_wav(fpath: str) -> Tuple[int, np.ndarray]:
     return scipy.io.wavfile.read(fpath)
-
