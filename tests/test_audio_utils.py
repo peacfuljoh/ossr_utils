@@ -3,7 +3,7 @@ import os
 
 import numpy as np
 
-from src.bb_utils.audio_utils import read_wav, write_wav
+from src.ossr_utils.audio_utils import read_wav, write_wav
 
 
 

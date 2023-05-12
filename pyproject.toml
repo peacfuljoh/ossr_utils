@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "bb-utils"
+name = "ossr-utils"
 version = "0.1.0"
 description = "Utils for the buddybork system"
 authors = ["Johannes Traa"]

@@ -1,7 +1,7 @@
 
 import numpy as np
 
-from src.bb_utils.fft_utils import stft
+from src.ossr_utils.fft_utils import stft
 
 
 
