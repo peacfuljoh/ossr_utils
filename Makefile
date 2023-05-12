@@ -3,19 +3,21 @@
 SHELL = /bin/bash
 CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate ; conda activate
 
-REPO_ROOT_ = /home/nuc/bb_utils
+REPO_NAME_ = ossr_utils
+
+REPO_ROOT_ = /home/nuc/$(REPO_NAME_)
 BB_ROOT_ = $(REPO_ROOT_)
-REPO_ROOT_GHA_ = /home/runner/work/bb_utils/bb_utils
+REPO_ROOT_GHA_ = /home/runner/work/$(REPO_NAME_)/$(REPO_NAME_)
 BB_ROOT_GHA_ = $(REPO_ROOT_GHA_)
 
 
 test:
-	$(CONDA_ACTIVATE) bb_utils
+	$(CONDA_ACTIVATE) $(REPO_NAME_)
 	cd $(BB_ROOT_)
 	pytest
 
 test-gha:
-	$(CONDA_ACTIVATE) bb_utils
+	$(CONDA_ACTIVATE) $(REPO_NAME_)
 	cd $(BB_ROOT_GHA_)
 	pytest
 
