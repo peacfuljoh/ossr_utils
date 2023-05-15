@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 def get_seg_amp_metric(wf):
     """Calculate audio segment amplitude metric"""
-    return np.max(np.abs(wf))
+    return int(np.max(np.abs(wf)))
 
 
 def get_ts_now():
