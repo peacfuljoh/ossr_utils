@@ -1,5 +1,6 @@
 
 import os
+from pathlib import Path
 
 import numpy as np
 
@@ -24,6 +25,16 @@ def test_pickle():
     for key in obj.keys():
         assert obj[key] == obj2[key]
 
+def test_pickle_with_make_dir():
+    obj = make_obj()
+    fpath = './dummy/dummy.pickle'
+    save_pickle(fpath, obj, make_dir=True)
+    obj2 = load_pickle(fpath)
+    os.remove(fpath)
+    Path(fpath).parent.rmdir()
+    for key in obj.keys():
+        assert obj[key] == obj2[key]
+
 def test_json():
     obj = make_obj()
     fpath = './dummy.json'
@@ -33,8 +44,21 @@ def test_json():
     for key in obj.keys():
         assert obj[key] == obj2[key]
 
+def test_json_with_make_dir():
+    obj = make_obj()
+    fpath = './dummy/dummy.json'
+    save_json(fpath, obj, make_dir=True)
+    obj2 = load_json(fpath)
+    os.remove(fpath)
+    Path(fpath).parent.rmdir()
+    for key in obj.keys():
+        assert obj[key] == obj2[key]
+
+
 
 
 if __name__ == "__main__":
     test_pickle()
+    test_pickle_with_make_dir()
     test_json()
+    test_json_with_make_dir()
