@@ -36,5 +36,6 @@ deploy:
 ifneq ($(PYPI_PKG_VER_), $(LOCAL_PKG_VER_))
 	@echo Upgrading package from $(PYPI_PKG_VER_) to $(LOCAL_PKG_VER_)
 	@poetry build
+	@$(CONDA_ACTIVATE) $(REPO_NAME_) && \
 	@poetry publish --username=$(USERNAME) --password=$(PASSWORD)
 endif
