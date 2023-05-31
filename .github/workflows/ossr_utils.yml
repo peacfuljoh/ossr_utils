@@ -20,3 +20,9 @@ jobs:
         run: make test-gha
         env:
           PYTHONPATH: ${{ env.PYTHONPATH }}
+      - name: deploy to PyPI
+        shell: bash
+        env:
+          PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: make deploy USERNAME="$PYPI_USERNAME" PASSWORD="$PYPI_PASSWORD"
