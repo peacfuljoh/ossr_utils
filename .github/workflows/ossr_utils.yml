@@ -2,7 +2,7 @@ name: ossr_utils-CI
 run-name: ${{ github.actor }} is validating the ossr_utils repo
 on: [push]
 jobs:
-  run-tests:
+  test-and-deploy:
     runs-on: ubuntu-20.04
     steps:
       - name: checkout code
@@ -21,8 +21,7 @@ jobs:
         env:
           PYTHONPATH: ${{ env.PYTHONPATH }}
       - name: deploy to PyPI
-        shell: bash
+        run: make deploy USERNAME="$PYPI_USERNAME" PASSWORD="$PYPI_PASSWORD"
         env:
           PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
           PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-        run: make deploy USERNAME="$PYPI_USERNAME" PASSWORD="$PYPI_PASSWORD"
