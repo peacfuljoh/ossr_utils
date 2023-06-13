@@ -10,7 +10,7 @@ jobs:
       - run: cd /home/runner/work/ossr_utils/ossr_utils
       - name: setup env vars
         run: make build-gha
-      - name: setup conda env and activate
+      - name: setup conda env
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: ossr_utils
